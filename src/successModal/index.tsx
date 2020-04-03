@@ -26,7 +26,8 @@ const StyledSuccessModal = styled(Modal)`
 
   .kirk-modal-body {
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    min-height: -webkit-fill-available;
     flex-direction: column;
 
     @media (${responsiveBreakpoints.isMediaLarge}) {
