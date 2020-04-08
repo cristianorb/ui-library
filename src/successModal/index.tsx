@@ -7,7 +7,6 @@ import IllustratedSection from 'layout/section/illustratedSection'
 
 import Modal from 'modal'
 import Button from 'button'
-import TextDisplay1 from 'typography/display1'
 
 const StyledSuccessModal = styled(Modal)`
   padding: 0;
@@ -58,7 +57,7 @@ const StyledIllustratedSection = styled(IllustratedSection)`
     flex: 1;
   }
 `
-const SuccessTitle = styled(TextDisplay1)`
+const SuccessTitle = styled('h1')`
   padding: ${space.xl};
   flex: 1;
 `

@@ -4,6 +4,8 @@ import uuidv4 from 'uuid/v4'
 import { ModalProps } from 'modal'
 import { ButtonStatus } from 'button'
 
+import TextDisplay1 from 'typography/display1'
+
 import { SuccessModalStyle } from './index'
 
 export interface SuccessModalProps extends ModalProps {
@@ -49,8 +51,8 @@ const SuccessModal = (props: SuccessModalProps): JSX.Element => {
       data-test="success-modal"
     >
       <StyledIllustratedSection illustrationUrl={imageSrc} illustrationAlt={imageText}>
-        <SuccessTitle isInverted data-test="success-title">
-          {children}
+        <SuccessTitle data-test="success-title">
+          <TextDisplay1 isInverted>{children}</TextDisplay1>
         </SuccessTitle>
         <SuccessAction>
           <SuccessButton
