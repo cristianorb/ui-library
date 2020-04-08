@@ -136,6 +136,10 @@ button:hover.c2 {
   text-align: right;
 }
 
+.c2 .kirk-text {
+  display: block;
+}
+
 .c2 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -216,38 +220,38 @@ button:hover.c2 {
     <div
       className="kirk-item c2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c3"
         >
           First item
-        </div>
-        <div
+        </span>
+        <span
           className="kirk-text kirk-text-body kirk-item-body c3"
         >
           First info
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       className="kirk-item c2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c3"
         >
           Second item
-        </div>
-        <div
+        </span>
+        <span
           className="kirk-text kirk-text-body kirk-item-body c3"
         >
           Second info
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
   </div>
 </div>
@@ -389,6 +393,10 @@ button:hover.c2 {
   text-align: right;
 }
 
+.c2 .kirk-text {
+  display: block;
+}
+
 .c2 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -469,38 +477,38 @@ button:hover.c2 {
     <div
       className="kirk-item c2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c3"
         >
           First item
-        </div>
-        <div
+        </span>
+        <span
           className="kirk-text kirk-text-body kirk-item-body c3"
         >
           First info
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       className="kirk-item c2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c3"
         >
           Second item
-        </div>
-        <div
+        </span>
+        <span
           className="kirk-text kirk-text-body kirk-item-body c3"
         >
           Second info
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
   </div>
 </div>

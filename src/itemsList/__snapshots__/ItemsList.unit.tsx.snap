@@ -152,6 +152,10 @@ button:hover.c1 {
   text-align: right;
 }
 
+.c1 .kirk-text {
+  display: block;
+}
+
 .c1 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -209,22 +213,6 @@ button:hover.c1 {
   list-style-type: none;
 }
 
-.c0.kirk-items-list--withSeparators .kirk-items-list-item + .kirk-items-list-item,
-.c0 .kirk-items-list-item--withSeparator {
-  margin-top: 16px;
-  position: relative;
-}
-
-.c0.kirk-items-list--withSeparators .kirk-items-list-item + .kirk-items-list-item::before,
-.c0 .kirk-items-list-item--withSeparator::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  right: 0px;
-  left: 0px;
-  border-bottom: 1px solid #EDEDED;
-}
-
 <ul
   className="kirk-items-list c0"
   role=""
@@ -236,10 +224,10 @@ button:hover.c1 {
       className="kirk-item kirk-item--clickable kirk-item-choice c1"
       href="#1"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c2"
           style={
             Object {
@@ -248,11 +236,11 @@ button:hover.c1 {
           }
         >
           Item 1
-        </div>
+        </span>
         
-      </div>
+      </span>
       
-      <div
+      <span
         className="kirk-item-rightAddon"
       >
         <svg
@@ -275,7 +263,7 @@ button:hover.c1 {
             strokeWidth="2"
           />
         </svg>
-      </div>
+      </span>
     </a>
   </li>
   <li
@@ -285,10 +273,10 @@ button:hover.c1 {
       className="kirk-item kirk-item--clickable kirk-item-choice c1"
       href="#2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c2"
           style={
             Object {
@@ -297,11 +285,11 @@ button:hover.c1 {
           }
         >
           Item 2
-        </div>
+        </span>
         
-      </div>
+      </span>
       
-      <div
+      <span
         className="kirk-item-rightAddon"
       >
         <svg
@@ -324,7 +312,7 @@ button:hover.c1 {
             strokeWidth="2"
           />
         </svg>
-      </div>
+      </span>
     </a>
   </li>
   <li
@@ -334,10 +322,10 @@ button:hover.c1 {
       className="kirk-item kirk-item--clickable kirk-item-choice c1"
       href="#3"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c2"
           style={
             Object {
@@ -346,11 +334,11 @@ button:hover.c1 {
           }
         >
           Item 3
-        </div>
+        </span>
         
-      </div>
+      </span>
       
-      <div
+      <span
         className="kirk-item-rightAddon"
       >
         <svg
@@ -373,7 +361,7 @@ button:hover.c1 {
             strokeWidth="2"
           />
         </svg>
-      </div>
+      </span>
     </a>
   </li>
 </ul>
@@ -531,6 +519,10 @@ button:hover.c1 {
   text-align: right;
 }
 
+.c1 .kirk-text {
+  display: block;
+}
+
 .c1 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -577,6 +569,19 @@ button:hover.c1 {
   bottom: 0;
 }
 
+.c4 {
+  height: calc(2 * 8px);
+  position: relative;
+}
+
+.c4:after {
+  position: absolute;
+  top: 8px;
+  content: ' ';
+  border-top: solid #EDEDED 1px;
+  width: 100%;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -586,22 +591,6 @@ button:hover.c1 {
   -ms-flex-direction: column;
   flex-direction: column;
   list-style-type: none;
-}
-
-.c0.kirk-items-list--withSeparators .kirk-items-list-item + .kirk-items-list-item,
-.c0 .kirk-items-list-item--withSeparator {
-  margin-top: 16px;
-  position: relative;
-}
-
-.c0.kirk-items-list--withSeparators .kirk-items-list-item + .kirk-items-list-item::before,
-.c0 .kirk-items-list-item--withSeparator::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  right: 0px;
-  left: 0px;
-  border-bottom: 1px solid #EDEDED;
 }
 
 <ul
@@ -615,10 +604,10 @@ button:hover.c1 {
       className="kirk-item kirk-item--clickable kirk-item-choice c1"
       href="#1"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c2"
           style={
             Object {
@@ -627,11 +616,11 @@ button:hover.c1 {
           }
         >
           Item 1
-        </div>
+        </span>
         
-      </div>
+      </span>
       
-      <div
+      <span
         className="kirk-item-rightAddon"
       >
         <svg
@@ -654,7 +643,7 @@ button:hover.c1 {
             strokeWidth="2"
           />
         </svg>
-      </div>
+      </span>
     </a>
   </li>
   <li
@@ -664,10 +653,10 @@ button:hover.c1 {
       className="kirk-item kirk-item--clickable kirk-item-choice c1"
       href="#2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c2"
           style={
             Object {
@@ -676,11 +665,11 @@ button:hover.c1 {
           }
         >
           Item 2
-        </div>
+        </span>
         
-      </div>
+      </span>
       
-      <div
+      <span
         className="kirk-item-rightAddon"
       >
         <svg
@@ -703,20 +692,24 @@ button:hover.c1 {
             strokeWidth="2"
           />
         </svg>
-      </div>
+      </span>
     </a>
+    <div
+      aria-hidden="true"
+      className="c4"
+    />
   </li>
   <li
-    className="kirk-items-list-item kirk-items-list-item--withSeparator"
+    className="kirk-items-list-item"
   >
     <a
       className="kirk-item kirk-item--clickable kirk-item-choice c1"
       href="#3"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c2"
           style={
             Object {
@@ -725,11 +718,11 @@ button:hover.c1 {
           }
         >
           Item 3
-        </div>
+        </span>
         
-      </div>
+      </span>
       
-      <div
+      <span
         className="kirk-item-rightAddon"
       >
         <svg
@@ -752,7 +745,7 @@ button:hover.c1 {
             strokeWidth="2"
           />
         </svg>
-      </div>
+      </span>
     </a>
   </li>
 </ul>
@@ -910,6 +903,10 @@ button:hover.c1 {
   text-align: right;
 }
 
+.c1 .kirk-text {
+  display: block;
+}
+
 .c1 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -956,6 +953,19 @@ button:hover.c1 {
   bottom: 0;
 }
 
+.c4 {
+  height: calc(2 * 8px);
+  position: relative;
+}
+
+.c4:after {
+  position: absolute;
+  top: 8px;
+  content: ' ';
+  border-top: solid #EDEDED 1px;
+  width: 100%;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -967,24 +977,8 @@ button:hover.c1 {
   list-style-type: none;
 }
 
-.c0.kirk-items-list--withSeparators .kirk-items-list-item + .kirk-items-list-item,
-.c0 .kirk-items-list-item--withSeparator {
-  margin-top: 16px;
-  position: relative;
-}
-
-.c0.kirk-items-list--withSeparators .kirk-items-list-item + .kirk-items-list-item::before,
-.c0 .kirk-items-list-item--withSeparator::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  right: 0px;
-  left: 0px;
-  border-bottom: 1px solid #EDEDED;
-}
-
 <ul
-  className="kirk-items-list c0 kirk-items-list--withSeparators"
+  className="kirk-items-list c0"
   role=""
 >
   <li
@@ -994,10 +988,10 @@ button:hover.c1 {
       className="kirk-item kirk-item--clickable kirk-item-choice c1"
       href="#1"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c2"
           style={
             Object {
@@ -1006,11 +1000,11 @@ button:hover.c1 {
           }
         >
           Item 1
-        </div>
+        </span>
         
-      </div>
+      </span>
       
-      <div
+      <span
         className="kirk-item-rightAddon"
       >
         <svg
@@ -1033,8 +1027,12 @@ button:hover.c1 {
             strokeWidth="2"
           />
         </svg>
-      </div>
+      </span>
     </a>
+    <div
+      aria-hidden="true"
+      className="c4"
+    />
   </li>
   <li
     className="kirk-items-list-item"
@@ -1043,10 +1041,10 @@ button:hover.c1 {
       className="kirk-item kirk-item--clickable kirk-item-choice c1"
       href="#2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c2"
           style={
             Object {
@@ -1055,11 +1053,11 @@ button:hover.c1 {
           }
         >
           Item 2
-        </div>
+        </span>
         
-      </div>
+      </span>
       
-      <div
+      <span
         className="kirk-item-rightAddon"
       >
         <svg
@@ -1082,8 +1080,12 @@ button:hover.c1 {
             strokeWidth="2"
           />
         </svg>
-      </div>
+      </span>
     </a>
+    <div
+      aria-hidden="true"
+      className="c4"
+    />
   </li>
   <li
     className="kirk-items-list-item"
@@ -1092,10 +1094,10 @@ button:hover.c1 {
       className="kirk-item kirk-item--clickable kirk-item-choice c1"
       href="#3"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-title c2"
           style={
             Object {
@@ -1104,11 +1106,11 @@ button:hover.c1 {
           }
         >
           Item 3
-        </div>
+        </span>
         
-      </div>
+      </span>
       
-      <div
+      <span
         className="kirk-item-rightAddon"
       >
         <svg
@@ -1131,7 +1133,7 @@ button:hover.c1 {
             strokeWidth="2"
           />
         </svg>
-      </div>
+      </span>
     </a>
   </li>
 </ul>

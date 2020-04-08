@@ -152,6 +152,10 @@ button:hover.c2 {
   text-align: right;
 }
 
+.c2 .kirk-text {
+  display: block;
+}
+
 .c2 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -257,22 +261,6 @@ button:hover.c2 {
   list-style-type: none;
 }
 
-.c0.kirk-items-list--withSeparators .kirk-items-list-item + .kirk-items-list-item,
-.c0 .kirk-items-list-item--withSeparator {
-  margin-top: 16px;
-  position: relative;
-}
-
-.c0.kirk-items-list--withSeparators .kirk-items-list-item + .kirk-items-list-item::before,
-.c0 .kirk-items-list-item--withSeparator::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  right: 0px;
-  left: 0px;
-  border-bottom: 1px solid #EDEDED;
-}
-
 <ul
   aria-labelledby="my-div-id"
   className="kirk-items-list c0"
@@ -284,16 +272,16 @@ button:hover.c2 {
     <label
       className="kirk-item kirk-item--clickable kirk-item-radio c1 c2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-body kirk-item-body c3"
         >
           1
-        </div>
-      </div>
-      <div
+        </span>
+      </span>
+      <span
         className="kirk-item-rightAddon"
       >
         <input
@@ -325,7 +313,7 @@ button:hover.c2 {
             stroke="#00AFF5"
           />
         </svg>
-      </div>
+      </span>
     </label>
   </li>
   <li
@@ -334,16 +322,16 @@ button:hover.c2 {
     <label
       className="kirk-item kirk-item--clickable kirk-item-radio c1 c2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-body kirk-item-body c3"
         >
           2
-        </div>
-      </div>
-      <div
+        </span>
+      </span>
+      <span
         className="kirk-item-rightAddon"
       >
         <input
@@ -382,7 +370,7 @@ button:hover.c2 {
             r="18"
           />
         </svg>
-      </div>
+      </span>
     </label>
   </li>
   <li
@@ -391,16 +379,16 @@ button:hover.c2 {
     <label
       className="kirk-item kirk-item--clickable kirk-item-radio c1 c2"
     >
-      <div
+      <span
         className="kirk-item-leftText"
       >
-        <div
+        <span
           className="kirk-text kirk-text-body kirk-item-body c3"
         >
           3
-        </div>
-      </div>
-      <div
+        </span>
+      </span>
+      <span
         className="kirk-item-rightAddon"
       >
         <input
@@ -432,7 +420,7 @@ button:hover.c2 {
             stroke="#00AFF5"
           />
         </svg>
-      </div>
+      </span>
     </label>
   </li>
 </ul>

@@ -61,6 +61,10 @@ const StyledItem = styled(Item)`
   }
 
   /* Text */
+  & .kirk-text {
+    display: block;
+  }
+
   & .kirk-item-title--withBody {
     margin-bottom: ${space.s};
   }

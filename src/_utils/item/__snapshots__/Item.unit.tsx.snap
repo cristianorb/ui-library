@@ -152,6 +152,10 @@ button:hover.c0 {
   text-align: right;
 }
 
+.c0 .kirk-text {
+  display: block;
+}
+
 .c0 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -201,21 +205,21 @@ button:hover.c0 {
 <div
   className="kirk-item custom c0"
 >
-  <div
+  <span
     className="kirk-item-leftText"
   >
-    <div
+    <span
       className="kirk-text kirk-text-title c1"
     >
       Test
-    </div>
-    <div
+    </span>
+    <span
       className="kirk-text kirk-text-body kirk-item-body c1"
     >
       Test
-    </div>
-  </div>
-  <div
+    </span>
+  </span>
+  <span
     className="kirk-item-rightAddon"
   >
     <svg
@@ -251,6 +255,6 @@ button:hover.c0 {
         </g>
       </g>
     </svg>
-  </div>
+  </span>
 </div>
 `;

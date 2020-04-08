@@ -152,6 +152,10 @@ button:hover.c0 {
   text-align: right;
 }
 
+.c0 .kirk-text {
+  display: block;
+}
+
 .c0 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -233,21 +237,21 @@ button:hover.c0 {
 <label
   className="kirk-item kirk-item--clickable kirk-item-radio custom-class-name c0"
 >
-  <div
+  <span
     className="kirk-item-leftText"
   >
-    <div
+    <span
       className="kirk-text kirk-text-title c1"
     >
       Label title
-    </div>
-    <div
+    </span>
+    <span
       className="kirk-text kirk-text-body kirk-item-body c1"
     >
       Label
-    </div>
-  </div>
-  <div
+    </span>
+  </span>
+  <span
     className="kirk-item-rightText"
   >
     <div
@@ -260,8 +264,8 @@ button:hover.c0 {
     >
       Data info
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="kirk-item-rightAddon"
   >
     <input
@@ -300,7 +304,7 @@ button:hover.c0 {
         r="18"
       />
     </svg>
-  </div>
+  </span>
 </label>
 `;
 
@@ -456,6 +460,10 @@ button:hover.c0 {
   text-align: right;
 }
 
+.c0 .kirk-text {
+  display: block;
+}
+
 .c0 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -568,21 +576,21 @@ button:hover.c0 {
 <label
   className="kirk-item kirk-item--clickable kirk-item-radio custom-class-name c0"
 >
-  <div
+  <span
     className="kirk-item-leftText"
   >
-    <div
+    <span
       className="kirk-text kirk-text-title c1"
     >
       Label title
-    </div>
-    <div
+    </span>
+    <span
       className="kirk-text kirk-text-body kirk-item-body c1"
     >
       Label
-    </div>
-  </div>
-  <div
+    </span>
+  </span>
+  <span
     className="kirk-item-rightText"
   >
     <div
@@ -595,8 +603,8 @@ button:hover.c0 {
     >
       Data info
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="kirk-item-rightAddon"
   >
     <input
@@ -638,7 +646,7 @@ button:hover.c0 {
         />
       </svg>
     </div>
-  </div>
+  </span>
 </label>
 `;
 
@@ -794,6 +802,10 @@ button:hover.c0 {
   text-align: right;
 }
 
+.c0 .kirk-text {
+  display: block;
+}
+
 .c0 .kirk-item-title--withBody {
   margin-bottom: 4px;
 }
@@ -875,21 +887,21 @@ button:hover.c0 {
 <label
   className="kirk-item kirk-item--clickable kirk-item-radio custom-class-name c0"
 >
-  <div
+  <span
     className="kirk-item-leftText"
   >
-    <div
+    <span
       className="kirk-text kirk-text-title c1"
     >
       Label title
-    </div>
-    <div
+    </span>
+    <span
       className="kirk-text kirk-text-body kirk-item-body c1"
     >
       Label
-    </div>
-  </div>
-  <div
+    </span>
+  </span>
+  <span
     className="kirk-item-rightText"
   >
     <div
@@ -902,8 +914,8 @@ button:hover.c0 {
     >
       Data info
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="kirk-item-rightAddon"
   >
     <input
@@ -935,6 +947,6 @@ button:hover.c0 {
         stroke="#00AFF5"
       />
     </svg>
-  </div>
+  </span>
 </label>
 `;
