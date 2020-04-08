@@ -24,7 +24,8 @@ const SuccessModal = (props: SuccessModalProps): JSX.Element => {
     className,
   } = props
 
-  const successContentId = `kirk-successModal-content-${uuidv4()}`
+  const baseClassName = 'kirk-successModal'
+  const successContentId = `${baseClassName}-content-${uuidv4()}`
 
   const {
     StyledSuccessModal,
@@ -43,6 +44,7 @@ const SuccessModal = (props: SuccessModalProps): JSX.Element => {
       displayDimmer={false}
       forwardedRef={forwardedRef}
       className={className}
+      modalContentClassName={baseClassName}
       ariaLabelledBy={successContentId}
       data-test="success-modal"
     >

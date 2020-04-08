@@ -1,7 +1,7 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 
-import SuccessModal from 'successModal'
+import SuccessModal from './index'
 
 const defaultProps = {
   isOpen: false,
@@ -9,19 +9,13 @@ const defaultProps = {
   imageSrc: 'https://svgshare.com/i/AGz.svg',
   imageText: 'Illustration description',
   closeOnEsc: true,
+  onClose: () => {},
+  forwardedRef: null,
 }
 
 describe('<SuccessModal>', () => {
   let mockClose
-  let wrapper
   let wrapperOpen
-
-  // beforeEach(() => {})
-
-  it('Should be not visible if isOpen is set to false', () => {
-    wrapper = shallow(<SuccessModal isOpen={false} {...defaultProps} />)
-    expect(wrapper.find('[data-test="success-modal"]').exists()).toBe(false)
-  })
 
   it('Should be visible if isOpen is set to true', () => {
     mockClose = jest.fn()
@@ -30,36 +24,36 @@ describe('<SuccessModal>', () => {
         Success description
       </SuccessModal>,
     )
-    expect(
-      wrapperOpen
-        .find('[data-test="success-modal"]')
-        .at(0)
-        .exists(),
-    ).toBe(true)
+    expect(wrapperOpen.find('.kirk-modal-dialog').exists()).toBe(true)
   })
 
-  // it('Should have proper linked id to the content text', () => {
-  //   expect(
-  //     wrapperOpen
-  //       .find('[data-test="success-title"]')
-  //       .at(0)
-  //       .text(),
-  //   ).toEqual('Success description')
-  // })
+  it('Should be hidden if isOpen is set to false', () => {
+    const wrapper = shallow(<SuccessModal {...defaultProps} />)
+    expect(wrapper.find('.kirk-modal-dialog').exists()).toBe(false)
+  })
 
-  // it('Should have a confirmation button and call the according function when click on it', () => {
-  //   expect(
-  //     wrapperOpen
-  //       .find('[data-test="success-button"]')
-  //       .at(0)
-  //       .text(),
-  //   ).toBe('Confirm')
-  // })
+  it('Should have proper linked id to the content text', () => {
+    expect(
+      wrapperOpen
+        .find('[data-test="success-title"]')
+        .at(0)
+        .text(),
+    ).toEqual('Success description')
+  })
 
-  // it('Should have a confirmation button and call the according function when click on it', () => {
-  //   const confirmButton = wrapperOpen.find('[data-test="success-button"]').at(0)
-  //   expect(confirmButton.text()).toBe('Confirm')
-  //   confirmButton.simulate('click')
-  //   expect(mockClose).toHaveBeenCalledTimes(1)
-  // })
+  it('Should have a confirmation button and call the according function when click on it', () => {
+    expect(
+      wrapperOpen
+        .find('[data-test="success-button"]')
+        .at(0)
+        .text(),
+    ).toBe('Confirm')
+  })
+
+  it('Should have a confirmation button and call the according function when click on it', () => {
+    const confirmButton = wrapperOpen.find('[data-test="success-button"]').at(0)
+    expect(confirmButton.text()).toBe('Confirm')
+    confirmButton.simulate('click')
+    expect(mockClose).toHaveBeenCalledTimes(1)
+  })
 })
