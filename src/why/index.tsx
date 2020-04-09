@@ -20,6 +20,14 @@ const StyledWhy = styled(Why)`
     background-color: ${color.lightBackground};
   }
 
+  :focus:not(.focus-visible) {
+    outline: none;
+  }
+
+  .focus-visible {
+    outline: 1;
+  }
+
   /* Reset hover styles on devices not supporting hover state (e.g. touch devices). */
   @media (hover: none), (hover: on-demand) {
     &:hover {
