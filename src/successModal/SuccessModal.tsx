@@ -31,7 +31,9 @@ const SuccessModal = (props: SuccessModalProps): JSX.Element => {
 
   const {
     StyledSuccessModal,
-    StyledIllustratedSection,
+    Media,
+    Figure,
+    Content,
     SuccessTitle,
     SuccessAction,
     SuccessButton,
@@ -50,21 +52,26 @@ const SuccessModal = (props: SuccessModalProps): JSX.Element => {
       ariaLabelledBy={successContentId}
       data-test="success-modal"
     >
-      <StyledIllustratedSection illustrationUrl={imageSrc} illustrationAlt={imageText}>
-        <SuccessTitle data-test="success-title">
-          <TextDisplay1 isInverted>{children}</TextDisplay1>
-        </SuccessTitle>
-        <SuccessAction>
-          <SuccessButton
-            status={ButtonStatus.SECONDARY}
-            className="test-success-button"
-            data-test="success-button"
-            onClick={onClose}
-          >
-            {confirmLabel}
-          </SuccessButton>
-        </SuccessAction>
-      </StyledIllustratedSection>
+      <Media>
+        <Figure>
+          <img src={imageSrc} alt={imageText} />
+        </Figure>
+        <Content>
+          <SuccessTitle data-test="success-title">
+            <TextDisplay1 isInverted>{children}</TextDisplay1>
+          </SuccessTitle>
+          <SuccessAction>
+            <SuccessButton
+              status={ButtonStatus.SECONDARY}
+              className="test-success-button"
+              data-test="success-button"
+              onClick={onClose}
+            >
+              {confirmLabel}
+            </SuccessButton>
+          </SuccessAction>
+        </Content>
+      </Media>
     </StyledSuccessModal>
   )
 }

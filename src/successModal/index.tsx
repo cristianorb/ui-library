@@ -3,8 +3,6 @@ import SuccessModal from './SuccessModal'
 
 import { color, space, responsiveBreakpoints } from '_utils/branding'
 
-import IllustratedSection from 'layout/section/illustratedSection'
-
 import Modal from 'modal'
 import Button from 'button'
 
@@ -26,6 +24,8 @@ const StyledSuccessModal = styled(Modal)`
   .kirk-modal-body {
     display: flex;
     min-height: 100vh;
+    /* to avoid scroll on webkit browsers when they have a top bar */
+    min-height: -moz-available;
     min-height: -webkit-fill-available;
     flex-direction: column;
 
@@ -37,43 +37,57 @@ const StyledSuccessModal = styled(Modal)`
   }
 `
 
-const StyledIllustratedSection = styled(IllustratedSection)`
+/* LAYOUT: Media */
+const Media = styled('div')`
   display: flex;
+  flex-direction: column;
   flex: 1;
+`
 
-  .kirk-illustratedSection-illustration {
-    padding-top: calc(2 * ${space.xxl});
-    justify-content: center;
-    align-items: center;
+const Figure = styled.figure`
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  padding-top: ${space.xxl};
+  height: 33vh;
 
-    @media (${responsiveBreakpoints.isMediaLarge}) {
-      padding-top: 0;
-    }
-  }
-
-  .kirk-illustratedSection-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  @media (${responsiveBreakpoints.isMediaLarge}) {
+    padding: 0;
+    width: 33vh;
   }
 `
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: ${space.xl};
+
+  @media (${responsiveBreakpoints.isMediaLarge}) {
+    flex: 1;
+    width: 66vh;
+    height: auto;
+  }
+`
+
+/* SuccessModal Spacements */
 const SuccessTitle = styled('h1')`
   padding: ${space.xl};
-  flex: 1;
 `
 
 const SuccessAction = styled.div`
   padding: ${space.xl};
 `
 
-// @todo: This should be applyed on Button component since it is part of its specification
 const SuccessButton = styled(Button)`
   margin: ${space.xl};
 `
 
 const SuccessModalStyle = {
   StyledSuccessModal,
-  StyledIllustratedSection,
+  Media,
+  Figure,
+  Content,
   SuccessTitle,
   SuccessAction,
   SuccessButton,
