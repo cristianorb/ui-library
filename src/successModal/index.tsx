@@ -44,10 +44,12 @@ const Media = styled.div`
   flex: 1;
 
   @media (${responsiveBreakpoints.isMediaLarge}) {
-    flex-direction: row;
+    max-width: ${componentSizes.largeSectionWidth};
     margin-left: auto;
     margin-right: auto;
-    max-width: ${componentSizes.largeSectionWidth};
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 `
 
@@ -57,11 +59,11 @@ const Figure = styled.figure`
   justify-content: center;
   align-items: center;
   padding-top: calc(2 * ${space.xxl});
-  height: 33vh;
+  height: 33.33vh;
 
   @media (${responsiveBreakpoints.isMediaLarge}) {
     padding: 0;
-    width: 33vh;
+    width: 33.33vh;
   }
 `
 
@@ -73,7 +75,7 @@ const Content = styled.div`
 
   @media (${responsiveBreakpoints.isMediaLarge}) {
     flex: 1;
-    width: 66vh;
+    width: 66.66vh;
     height: auto;
   }
 `
