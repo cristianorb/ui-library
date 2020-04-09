@@ -1,5 +1,6 @@
 # Unreleased
 
+- **[BREAKING CHANGE]** Remove `size` from `SuccessModal` api
 - **[UPDATE]** Add `toMonth` parameter to `DatePicker` and set it to 1 year by default
 - [...]
 
@@ -9,9 +10,9 @@
 
 # v26.0.0 (06/04/2020)
 
+- **[BREAKING CHANGE]** Import `icons` as default instead of named export for a better code splitting
 - **[FIX]** Remove DOM Warning on `MainContent` component
 - **[FIX]** Fix markup `Item` tag label by replacing `div` children with `span`
-- **[BREAKING CHANGE]** Import `icons` as default instead of named export for a better code splitting
 - **[UPDATE]** Make `Review` more semantic with proper HTML and Review/Rating microdata
 - **[FIX]** Fix clicking oustide of `SearchForm` closes overlays
 - **[UPDATE]** Use `Divider` in `ItemList` instead of custom CSS
