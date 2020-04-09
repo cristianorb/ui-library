@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import SuccessModal from './SuccessModal'
 
-import { color, space, responsiveBreakpoints } from '_utils/branding'
+import { color, space, responsiveBreakpoints, componentSizes } from '_utils/branding'
 
 import Modal from 'modal'
 import Button from 'button'
@@ -38,10 +38,17 @@ const StyledSuccessModal = styled(Modal)`
 `
 
 /* LAYOUT: Media */
-const Media = styled('div')`
+const Media = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+
+  @media (${responsiveBreakpoints.isMediaLarge}) {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: ${componentSizes.largeSectionWidth};
+  }
 `
 
 const Figure = styled.figure`
@@ -49,7 +56,7 @@ const Figure = styled.figure`
   margin: 0;
   justify-content: center;
   align-items: center;
-  padding-top: ${space.xxl};
+  padding-top: calc(2 * ${space.xxl});
   height: 33vh;
 
   @media (${responsiveBreakpoints.isMediaLarge}) {
@@ -57,6 +64,7 @@ const Figure = styled.figure`
     width: 33vh;
   }
 `
+
 const Content = styled.div`
   display: flex;
   flex-direction: column;
@@ -71,8 +79,17 @@ const Content = styled.div`
 `
 
 /* SuccessModal Spacements */
-const SuccessTitle = styled('h1')`
+const SuccessTitle = styled.h1`
+  display: flex;
+  flex: 1;
   padding: ${space.xl};
+
+  @media (${responsiveBreakpoints.isMediaLarge}) {
+    span {
+      /* Font-Size not available on typography scale */
+      font-size: 2.5rem;
+    }
+  }
 `
 
 const SuccessAction = styled.div`
@@ -80,7 +97,9 @@ const SuccessAction = styled.div`
 `
 
 const SuccessButton = styled(Button)`
-  margin: ${space.xl};
+  justify-content: center;
+  /* cascade weight :( */
+  min-width: 8rem !important;
 `
 
 const SuccessModalStyle = {

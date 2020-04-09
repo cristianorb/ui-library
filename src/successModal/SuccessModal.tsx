@@ -63,7 +63,6 @@ const SuccessModal = (props: SuccessModalProps): JSX.Element => {
           <SuccessAction>
             <SuccessButton
               status={ButtonStatus.SECONDARY}
-              className="test-success-button"
               data-test="success-button"
               onClick={onClose}
             >
