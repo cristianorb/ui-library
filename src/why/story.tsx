@@ -7,12 +7,20 @@ import { action } from '@storybook/addon-actions'
 import Section from 'layout/section/baseSection'
 import Why from 'why'
 
+const Log = (props: { name: string }): any => {
+  // eslint-disable-next-line no-console
+  console.log(`rendering "${props.name}"`)
+  return null
+}
+
 class LayoutExample extends Component {
   render() {
     return (
       <div>
         <FocusVisibleProvider>
+          <Log name="FocusVisibleProvider" />
           <Section>
+            <Log name="Section 1" />
             <ul>
               <li>
                 <Why
@@ -29,6 +37,7 @@ class LayoutExample extends Component {
           </Section>
         </FocusVisibleProvider>
         <Section>
+          <Log name="Section 2" />
           <button type="button">No focus provider</button>
         </Section>
       </div>

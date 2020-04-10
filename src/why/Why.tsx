@@ -13,6 +13,8 @@ export interface WhyProps {
 
 const Why = ({ className, children, title, onClick }: WhyProps) => {
   const { focusVisible, onFocus, onBlur } = FocusVisibleConsumer()
+  // eslint-disable-next-line no-console
+  console.log('Rendering Why')
   return (
     <button
       type="button"
